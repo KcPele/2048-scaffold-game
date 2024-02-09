@@ -41,7 +41,7 @@ const BoardView = () => {
 
   const cells = board.cells.map((row, rowIndex) => {
     return (
-      <div key={rowIndex} className="grid grid-cols-4 place-items-center">
+      <div key={rowIndex} className="grid grid-cols-4 ">
         {row.map((cell, columnIndex) => {
           return <Cell key={rowIndex * board.size + columnIndex} />;
         })}
@@ -72,9 +72,9 @@ const BoardView = () => {
           <p> {board.score}</p>
         </div>
       </div>
-      <div className="relative rounded-md p-1 h-[440px] mx-auto max-w-[440px] w-full">
+      <div className="relative rounded-md p-[5px] h-[440px] mx-auto max-w-[440px] w-full">
         {cells}
-        <div className="grid grid-cols-4 place-items-center"> {tiles}</div>
+        <div className="grid grid-cols-4 "> {tiles}</div>
         <GameOverlay OnRestart={resetGame} board={board} />
       </div>
     </div>

@@ -3,7 +3,7 @@ import { Tile } from "~~/helper";
 
 const TilesView = ({ tile }: { tile: Tile }) => {
   let classArray = ["tile"];
-  classArray.push("rounded-md bg-cus-purple-100 m-1 text-[#766] max-w-[100px] w-full h-[100px] tile" + tile.value);
+  classArray.push("rounded-md bg-cus-purple-100  text-[#766] max-w-[100px] w-full h-[100px] tile" + tile.value);
   if (!tile.mergedInto) {
     classArray.push(`position_${tile.row}_${tile.column}`);
   }
