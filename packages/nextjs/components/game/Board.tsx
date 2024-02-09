@@ -41,7 +41,7 @@ const BoardView = () => {
 
   const cells = board.cells.map((row, rowIndex) => {
     return (
-      <div key={rowIndex} className="grid grid-cols-4 place-items-center">
+      <div key={rowIndex}>
         {row.map((cell, columnIndex) => {
           return <Cell key={rowIndex * board.size + columnIndex} />;
         })}
@@ -58,23 +58,20 @@ const BoardView = () => {
     setBoard(new Board());
   };
   return (
-    <div className=" ">
-      <div className="max-w-[440px] mx-auto flex justify-between p-1">
-        <button
-          onClick={resetGame}
-          className="rounded-md text-2xl text-white/50 px-5 py-2 bg-cus-purple-100 hover:bg-red-500 hover:text-white"
-        >
+    <div>
+      <div className="max-w-[440px] mx-auto flex justify-between">
+        <button onClick={resetGame} className="resetButton">
           New game
         </button>
 
-        <div className="flex  bg-cus-purple-100 text-white/50 py-1 px-4 rounded-md w-fit">
-          <p className="">Score:</p>
-          <p> {board.score}</p>
+        <div className=" score-box">
+          <div className="score-header">Score:</div>
+          <div> {board.score}</div>
         </div>
       </div>
-      <div className="relative rounded-md p-1 h-[440px] mx-auto max-w-[440px] w-full">
+      <div className="board mx-auto">
         {cells}
-        <div className="grid grid-cols-4 place-items-center"> {tiles}</div>
+        {tiles}
         <GameOverlay OnRestart={resetGame} board={board} />
       </div>
     </div>
