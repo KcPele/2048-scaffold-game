@@ -3,86 +3,11 @@
 //   src: url("../src/clear-sans.ttf") format("truetype");
 // }
 
-body {
-  background-color: #57407c !important;
-
-  font-family: "Clear Sans", sans-serif;
-  font-size: 21px;
-}
-
 .text {
   order: 2;
   padding-top: 40px;
   width: 440px;
   font-weight: bold;
-}
-
-.board {
-  order: 1;
-  width: 500px;
-  height: 440px;
-  padding: 5px;
-  background-color: #57407c;
-  border-radius: 7px;
-  outline: none;
-  position: relative;
-}
-
-.board .cell,
-.tile {
-  user-select: none;
-  cursor: default;
-}
-
-.details-box {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  justify-content: space-between;
-}
-
-.resetButton {
-  background-color: #3d2963;
-  color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  font-size: 25px;
-  padding: 10px 20px;
-  border-radius: 7px;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  &:hover {
-    background-color: #d3386a;
-    color: rgba(255, 255, 255, 1);
-  }
-}
-
-.score-header {
-  font-size: 50%;
-}
-
-.score-box {
-  background-color: #3d2963;
-  color: rgba(255, 255, 255, 0.5);
-  min-width: 50px;
-  width: 70px;
-  padding: 5px 15px;
-  border-radius: 7px;
-}
-
-.cell,
-.tile {
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  line-height: 90px;
-  display: inline-block;
-  font-size: 55px;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: middle;
-  border-radius: 7px;
-  font-family: "Clear Sans";
-  color: #766;
-  background-color: #3d2963;
 }
 
 .tile0 {
