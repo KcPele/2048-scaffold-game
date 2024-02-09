@@ -72,9 +72,9 @@ const BoardView = () => {
           <p> {board.score}</p>
         </div>
       </div>
-      <div className="relative rounded-md p-[5px] h-[440px] mx-auto max-w-[440px] w-full">
+      <div className="relative rounded-md  h-[440px] mx-auto max-w-[440px] w-full">
         {cells}
-        <div className="grid grid-cols-4 "> {tiles}</div>
+        <div className="grid grid-cols-4 gap-1 "> {tiles}</div>
         <GameOverlay OnRestart={resetGame} board={board} />
       </div>
     </div>
